@@ -91,5 +91,6 @@ module.exports = {
   db: sequelize,
   Page,
   User,
-  Tag
+  Tag,
+  Sequelize
 };
