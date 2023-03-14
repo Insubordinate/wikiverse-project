@@ -51,6 +51,7 @@ export const SubmitForm = (props) => {
         setTags('')
         // Go back to homepage
         props.fetchPages()
+
         props.setIsStatus(0)
 
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { PagesList } from './PagesList';
-import {Footer } from './Footer'
 import { SubmitForm } from './SubmitForm';
 
 // import and prepend the api url to any fetch calls
@@ -72,8 +71,8 @@ export const App = () => {
 		return(
 		<main>
 		<div className='header'>
-			<h1>WikiVerse</h1>
-			<h2>An interesting 📚</h2>
+			<h1>I SEE YOU LIKE READING</h1>
+			<h2>INTERESTING TOPIC 📚</h2>
 		</div>	
 		<div className="pageList">
 			<PagesList pages={pages} setPages={setPages} fetchPages={fetchPages} isStatus={isStatus} setIsStatus={setIsStatus}/>

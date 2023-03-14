@@ -5,13 +5,7 @@ const { Page, User, Tag,Sequelize } = require("../models");
 // GET /wiki
 router.get("/", async (req, res, next) => {
   try {
-    const pages = await Page.findAll({
-                          where:{
-                              id:{
-                                [Sequelize.Op.in]:[1,2,3]
-                              }
-                          }
-                        });
+    const pages = await Page.findAll();
     res.send(pages);
   } catch (error) {
     next(error);
