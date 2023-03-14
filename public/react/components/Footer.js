@@ -1,15 +1,11 @@
 import React from 'react';
 
 export const Footer = (props) => {
-  const buttonText = ['Add Page','Next','Go Back','Delete','Submit']
+  const buttonText = ['Add Page','Next','Go Back']
 
-  async function goToHome(){
 
-    props.fetchPages()
-    props.setIsStatus(0)
-  }
 
-  
+  async function addPage(){}
 
   if(props.isStatus === 0){
     //"Default State"
@@ -17,7 +13,7 @@ export const Footer = (props) => {
     return <>
         
         <div className='footer'>
-            <button className='button'>{buttonText[0]}</button>
+            <button className='button' onClick={()=>props.setIsStatus(2)}>{buttonText[0]}</button>
             <button className='button'>{buttonText[1]}</button>
         </div>
     </>
@@ -27,7 +23,6 @@ export const Footer = (props) => {
   else if (props.isStatus === 1){
     return <>
         <div className='footer'>
-            <button className='button'>{buttonText[3]}</button>
             <button className='button' onClick={()=>goToHome()}>{buttonText[2]}</button>
         </div>
     </>
@@ -37,8 +32,7 @@ export const Footer = (props) => {
   else{
     return <>
         <div className='footer'>
-            <button className='button'>{buttonText[4]}</button>
-            <button className='button'>{buttonText[2]}</button>
+            <button onClick={()=>goToHome()}className='button'>{buttonText[2]}</button>
         </div>
     </>
   }
